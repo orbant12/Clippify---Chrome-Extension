@@ -1,27 +1,29 @@
 
-import './App.css'
-import {useEffect, useState} from 'react'
 
+import {  BrowserRouter as Router,  Routes,  Route} from "react-router-dom";
+import LandingScreen from './pages/LandingScreen'
+import UserAuthContext from './context/UserAuthContext.jsx';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Home from './pages/Home';
 
 function App() {
 
-const [isClippingOn, setIsClippingOn] = useState(false)
 
-useEffect(() => {
-  setIsClippingOn(false)
-}
-, [])
+  //ROUTER
 
   return (
     <>
-      <div className='extension-body'>
-          <h1>Clippify</h1>
-          {!isClippingOn ?(
-          <div className='clip-btn'>
-            <h3>Clip from this video</h3>
-          </div>
-          ):null}
-      </div>
+    <UserAuthContext>
+          <Router>
+            <Routes>        
+              <Route path="/landing" element={<LandingScreen />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Router>
+        </UserAuthContext>
     </>
   )
 }

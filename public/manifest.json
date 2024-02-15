@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "My First Extension",
     "version": "1.0",
-    "description": "The first extension that I made.",
+    "description": "Save clips quickly from Youtube videos to your Clippify Storage. Where you can further extract transcription, make notes, ask AI about the video and much more...",
     "action": {
         "default_popup": "../index.html"
     },

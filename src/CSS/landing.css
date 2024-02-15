@@ -1,0 +1,38 @@
+.extension-body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+  }
+  
+  .extension-body h1{
+    font-weight: 500;
+    opacity:0.8;
+  }
+  
+
+  .extension-body .further-options{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .extension-body .further-options a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px; 
+    border: 2px solid black;
+    border-radius: 30px;
+    font-weight: 500;
+  }
+
+  .extension-body .further-options a:hover{
+    background-color: black;
+    color: white;
+  }

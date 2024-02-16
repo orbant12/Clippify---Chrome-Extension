@@ -1,8 +1,8 @@
 import { useContext, createContext, useEffect, useState, ReactNode } from "react";
 import { AuthErrorCodes, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
-const { auth, db } = require("../firebase.js");
+import { auth, db }  from "../firebase.js";
 import { collection, doc, setDoc } from "firebase/firestore";
-
+import { createHashHistory } from 'history';
 interface User {
   uid: string;
 }
@@ -23,30 +23,34 @@ const UserAuthContext = ({ children }: { children: ReactNode }) => {
   const [currentuser, setuser] = useState<User | null | undefined>();
   const [error, setError] = useState<string>("");
 
+  const history = createHashHistory();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setuser(user);
         console.log("You are logged in");
-        if (window.location.pathname === "/login" || window.location.pathname === "/register") {
-          window.location.href = "/";
+        if (window.location.hash === "#/login" || window.location.hash === "#/register") {
+          history.push("/");
+          window.location.reload();
         }
       } else {
         if (
-          window.location.pathname !== "/login" &&
-          window.location.pathname !== "/register" &&
-          !window.location.pathname.startsWith("/support") &&
-          !window.location.pathname.startsWith("/policies") &&
-          window.location.pathname !== "/landing"
+          window.location.hash !== "#/login" &&
+          window.location.hash !== "#/register" &&
+          !window.location.hash.startsWith("#/support") &&
+          !window.location.hash.startsWith("#/policies") &&
+          window.location.hash !== "#/landing"
         ) {
-          window.location.href = "/landing";
+          history.push("/landing");
+          window.location.reload();
         }
       }
     });
 
     return () => unsubscribe();
-  }, []);
+
+  }, [history]);
 
 
   const Login = async (email: string, password: string) => {

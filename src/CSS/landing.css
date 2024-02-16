@@ -7,6 +7,7 @@
     margin-right: auto;
     margin-left: auto;
     align-items: center;
+    height: 400px;
   }
   
   .extension-body h1{
@@ -35,4 +36,26 @@
   .extension-body .further-options a:hover{
     background-color: black;
     color: white;
+  }
+
+
+  /*HOME*/
+
+  .folder-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+  }
+
+  .folder-box{
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 20px;
+  }
+
+  a{
+    text-decoration: none;
+    color: black;
   }

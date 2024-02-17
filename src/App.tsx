@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
 import Folder from './pages/Folder';
+import Settings from './pages/Settings';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/" element={<Home />} />
             <Route path="/folder/:id" element={<Folder />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </Router>
       </UserAuthContext>

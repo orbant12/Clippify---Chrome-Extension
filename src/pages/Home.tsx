@@ -43,7 +43,7 @@ const Home: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <Link style={{position:"absolute",top:20,left:10}} to={"/settings"}><SettingsIcon /></Link>
+            <Link style={{position:"absolute",top:15,left:10}} to={"/settings"}><SettingsIcon /></Link>
         </div>
     );
 }

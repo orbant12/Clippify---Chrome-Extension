@@ -148,6 +148,7 @@
   .video-preview h6{
     opacity: 0.3;
     cursor: pointer;
+    margin-top: -10px;
   }
 
   .video-preview h6:hover{

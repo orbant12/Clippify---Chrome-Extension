@@ -2,7 +2,6 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { Link } from 'react-router-dom';
 import LogoutIcon from '@mui/icons-material/Logout';
 import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import { useAuth } from '../context/UserAuthContext';
 import { signOut } from 'firebase/auth'
 import { auth } from '../firebase';
 

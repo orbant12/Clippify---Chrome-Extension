@@ -344,7 +344,7 @@ return (
                 controls
                 muted
                 onLoadedMetadata={handleLoadedData}
-                width="400"
+                width="300"
               ></video>
             </div>
             </VideoUrlPicker>:null

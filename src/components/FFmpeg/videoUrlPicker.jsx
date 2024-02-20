@@ -69,7 +69,7 @@ return showVideo ? (
     <h5 style={{fontWeight:650,fontSize:17,opacity:0.6}}>Insert your Video URL</h5>
     <TextField
       InputProps={{ crossOrigin: 'anonymous' }} 
-      style={{width: '80%'}}
+      style={{width: '50%'}}
       className='txt-field'
       label="Paste Link"
       id="video-url"

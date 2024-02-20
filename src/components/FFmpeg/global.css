@@ -24,7 +24,8 @@
 .range-picker{
     position: absolute;
     display: block;
-    padding-top:300px;
+    padding-top:200px;
+    padding-left: 40px;
   }
 
 .range_pack{
@@ -57,7 +58,7 @@
 }
 .image_box > img {
   height: 100%;
-  width: 30px;
+  width: 25px;
   object-fit: cover;
 
  
@@ -145,12 +146,6 @@
  
   /* z-index: 2; */
 }
-
-
-
-
-
-
 /*Video and INPUT and OUTPUT*/
 
 .deck {
@@ -160,8 +155,7 @@
   align-items: center;
   margin-top: 10px;
   width: 650px;
-
-  height: 400px;
+  height: 250px;
 }
 
 .grid_txt_2 {
@@ -174,17 +168,6 @@
   justify-content: center;
  
 }
-
-.bord_g_2{
-  border: 2px solid rgb(230, 220, 220);
-  width: 465px;
-}
-
-.bord_g_2 video{
-  border: 2px solid rgb(230, 220, 220);
-  max-width: 465px;
-}
-
 
 .down-btn{
   
@@ -314,28 +297,12 @@ div .btn2:hover{
  transform: scale(0.8);
 }
 
-.change-container{
- 
-}
-.custom-video-input{
-
-}
-.custom-video-title-btn{
-
-}
 .edit-row-video-title{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 200px;
 }
-
-  
-
- 
-  
-
-  
   
   .u-center button {
     border: none;
@@ -349,23 +316,11 @@ div .btn2:hover{
     color: rgb(155, 150, 150);
   }
  
-
- 
-
- 
- 
-  
-
   .u-center {
     text-align: center;
-    padding-left: 320px;
-    
+    padding-left: 320px;   
     margin-bottom: -300px;
-   
   }
-  
-
-
 
 .load-cont{
   padding: 10px;
@@ -375,8 +330,6 @@ div .btn2:hover{
   z-index: 99999;
   font-size: 30px;
 }
-
-
 
 #conver-button-cont{
   margin-bottom: -30px;
@@ -417,4 +370,9 @@ div .btn2:hover{
   margin-top: 60px;
 }
 
+video{
+  box-shadow: 0 0 10px 5px #f2f2f2;
+  max-width: 465px;
+  border-radius: 10px;
+}
 /*URL*/

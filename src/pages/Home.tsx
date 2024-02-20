@@ -33,7 +33,7 @@ const Home: React.FC = () => {
 
     return (
         <div className="extension-body">
-            <h1>Clippify</h1>
+            <h2>Clippify</h2>
             <div className='folder-container'>
                 {userFolders.map((folder) => (
                     <div className='folder-box' style={{backgroundColor:`${folder.color}`}}>

@@ -194,16 +194,31 @@ const Folder: React.FC = () => {
         }else{
           alert("Clip is too long for free users ! If you want to save longer then 10 minutes clips, please upgrade your account !")
         }
+        alert("File Created")
     };
+
+    const downloadVideo = () => {
+        const videoFileToDownload = trimmedVideoFile;
+        const a = document.createElement('a');
+        a.href = videoFileToDownload;
+        a.download = 'video.mp4';
+        a.click();
+    }
       
     return (
         <div className="extension-body">
-            <h1>Clippify</h1>
+            <h2>Clippify</h2>
             <VideoUrlApp handleUploadBtn={setIsUrlAdded} handleTitleInput={setFileTitle} setExtractMeta={setMetaData} setPassedAudioDataUrl={setAudioFile} fileImage={setFileImage} setPassedDataUrl={setTrimmedVideoFile}  />
             {isUrlAdded ? (
+              <div style={{display:"flex",flexDirection:"row",width:"100%",justifyContent:"space-between"}}>
                 <div className='btn-create-file' onClick={createFile}>
-                    <h5>Create File</h5>
+                    <h5>Add File</h5>
                 </div>
+
+                <div className='btn-dwnload-file' onClick={downloadVideo}>
+                  <h5>Download</h5>
+                </div>
+              </div>
             ):null}
             <Link style={{position:"absolute",top:15,left:10}} to={"/"}><ArrowBackIosNewIcon /></Link>
         </div>

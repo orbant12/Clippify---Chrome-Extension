@@ -10,7 +10,8 @@
     height: 400px;
   }
   
-  .extension-body h1{
+  .extension-body h2{
+    margin-top: 10px;
     font-weight: 500;
     opacity:0.8;
   }
@@ -185,6 +186,30 @@
     color: white;
     font-weight: 500;
     margin-top: 30px;
+  }
+
+  .btn-dwnload-file{
+    padding: 0px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid rgb(151, 252, 181);
+    background-color: rgb(40, 243, 101);
+    color: white;
+    font-weight: 500;
+    margin-top: 30px;
+  }
+
+  .btn-dwnload-file:hover{
+    background-color: white;
+    color: rgb(40, 243, 101);
+    cursor: pointer;
+  }
+
+  .btn-dwnload-file h5{
+    margin-top: 5px;
   }
 
   

@@ -4,17 +4,21 @@
     "version": "1.0",
     "description": "Save clips quickly from Youtube videos to your Clippify Storage. Where you can further extract transcription, make notes, ask AI about the video and much more...",
     "action": {
-        "default_popup": "../index.html"
+      "default_popup": "../index.html"
     },
     "permissions": [
-        "scripting"
+      "scripting"
     ],
     "host_permissions": [
-        "http://*/*",
-        "https://*/*"
+      "http://localhost:3000/*",  
+      "http://*/*",
+      "https://*/*"
     ],
     "icons": {
-        "32": "icon.png"
+      "32": "icon.png"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' 'nonce-{nonce}' http://localhost:3000; object-src 'self'; style-src 'self' https://cdn.jsdelivr.net;"
     }
-
-}
+  }
+  
